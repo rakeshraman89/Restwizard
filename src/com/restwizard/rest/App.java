@@ -1,5 +1,6 @@
 package com.restwizard.rest;
 
+import com.restwizard.rest.controller.EmployeeRestController;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;
@@ -18,6 +19,11 @@ public class App extends Application<Configuration> {
 
     @Override
     public void run (Configuration c, Environment e) throws Exception{
+        LOG.info("starting to run.....");
+        e.jersey().register(new EmployeeRestController(e.getValidator()));
+    }
 
+    public static void main (String []args) throws Exception {
+        new App().run(args);
     }
 }
