@@ -6,13 +6,11 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.validation.Validator;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.PathParam;
-import javax.ws.rs.Produces;
+import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
+import java.net.URI;
 
 @Path("/employees")
 @Produces(MediaType.APPLICATION_JSON)
@@ -36,6 +34,31 @@ public class EmployeeRestController {
         Employee employee = EmployeeDAO.getEmployeeById(id);
         if (employee != null) {
             return Response.ok (employee).build();
+        } else {
+            return Response.status(Status.NOT_FOUND).build();
+        }
+    }
+
+    @POST
+    //POST can only be executed via client
+    public Response createEmployee (Employee employee) throws Exception {
+        if (employee == null) {
+            return Response.serverError().entity("Employee object is empty").build();
+        } else if (EmployeeDAO.getEmployeeById(employee.getId()) != null) {
+            return Response.serverError().entity("Employee already exist. Call the update API to modify the employee details").build();
+        } else {
+            EmployeeDAO.updateEmployee(employee.getId(), employee);
+            return Response.created(new URI("/employees/" + employee.getId())).build();
+        }
+    }
+
+    @PUT
+    @Path("/modify/{id}")
+    //PUT can only be executed via client
+    public Response updateEmployee (@PathParam("id") Integer id, Employee employee) {
+        if (employee != null) {
+            EmployeeDAO.updateEmployee(id, employee);
+            return Response.ok().build();
         } else {
             return Response.status(Status.NOT_FOUND).build();
         }

@@ -25,4 +25,12 @@ public class EmployeeDAO {
     public static Employee getEmployeeById (Integer id) {
         return employees.get(id);
     }
+
+    public static void updateEmployee (Integer id, Employee newDetails) {
+        employees.put (id, newDetails);
+    }
+
+    public static void removeEmployee (Integer id) {
+        employees.remove(id);
+    }
 }
