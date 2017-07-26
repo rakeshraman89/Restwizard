@@ -1,6 +1,6 @@
-package com.restwizard.rest;
+package com.restwizard;
 
-import com.restwizard.rest.controller.EmployeeRestController;
+import com.restwizard.controller.EmployeeRestController;
 import io.dropwizard.Application;
 import io.dropwizard.Configuration;
 import io.dropwizard.setup.Bootstrap;

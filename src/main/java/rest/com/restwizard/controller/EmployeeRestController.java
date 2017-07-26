@@ -1,7 +1,7 @@
-package com.restwizard.rest.controller;
+package com.restwizard.controller;
 
-import com.restwizard.rest.dao.EmployeeDAO;
-import com.restwizard.rest.representations.Employee;
+import com.restwizard.dao.EmployeeDAO;
+import com.restwizard.representations.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
