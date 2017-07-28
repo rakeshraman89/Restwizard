@@ -23,15 +23,8 @@
         <servlet-name>proxy</servlet-name>
         <url-pattern>/api/*</url-pattern>
     </servlet-mapping>
-    <!--<servlet>-->
-        <!--<servlet-name>index</servlet-name>-->
-        <!--<jsp-file>/index.jsp</jsp-file>-->
-    <!--</servlet>-->
-    <!--<servlet-mapping>-->
-        <!--<servlet-name>index</servlet-name>-->
-        <!--<url-pattern>/RestWizardApp/*</url-pattern>-->
-    <!--</servlet-mapping>-->
+
     <welcome-file-list>
-        <welcome-file>index.jsp</welcome-file>
+        <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 </web-app>
