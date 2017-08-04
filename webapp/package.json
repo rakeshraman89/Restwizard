@@ -1,6 +1,7 @@
 {
   "name": "webapp",
   "version": "0.0.1",
+  "private": true,
   "description": "webapps packaged into jar with dependencies",
   "main": "./js/",
   "scripts": {

@@ -7,7 +7,7 @@ const PATHS = {
 };
 
 module.exports = {
-    entry: './js/restwizard/rest-entry.js',
+    entry: './js/rest-entry.js',
 
     output: {
         path: PATHS.build,
