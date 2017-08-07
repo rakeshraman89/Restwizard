@@ -7,10 +7,11 @@ const PATHS = {
 };
 
 module.exports = {
-    entry: './js/rest-entry.js',
+    entry: './src/main/webapp/js/rest-entry.js',
 
     output: {
         path: PATHS.build,
+        publicPath: '/js',
         filename: 'rest-react-bundle.js'
     }
 };
