@@ -1,22 +1,30 @@
-var greeter = require('./greeter');
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-var greeting = greeter.greet();
+class Toggle extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {isToggleOn: true};
 
-if (typeof document !== 'undefined') {
-    var el = document.createElement('h1');
-    el.innerHTML = greeting;
-    document.body.appendChild(el);
-} else {
-    console.log(greeting);
-}
+        this.handleClick = this.handleClick.bind(this);
+    }
 
-/*var ClickButton = React.createClass({
-    render: function() {
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+    }
+
+    render() {
         return (
-            <button type="button" name="Click" onClick={() => (alert('Button Clicked!!'))}></button>
+            <button onClick = {this.handleClick}>
+                {this.state.isToggleOn? 'ON' : 'OFF'}
+            </button>
         );
     }
-});
+}
+
 ReactDOM.render(
-<ClickButton />, document.getElementById("restwizard-div")
-);*/
+    <Toggle />,
+    document.getElementById('restwizard-div')
+);
