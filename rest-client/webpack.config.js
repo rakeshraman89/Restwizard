@@ -1,17 +1,30 @@
 var packageJSON = require('./package.json');
 var path = require('path');
 var webpack = require('webpack');
+var glob = require('glob');
 
 const PATHS = {
-    build: path.join(__dirname, 'target', 'classes', 'META-INF', 'resources', 'webjars', packageJSON.name, packageJSON.version)
+    build: path.join(__dirname, 'target', 'RestWeb', 'js')
 };
 
 module.exports = {
-    entry: './src/main/webapp/js/rest-entry.js',
+    entry: {
+        'myPages': glob.sync('./src/main/webapp/js/**/*.js')
+    },
 
     output: {
         path: PATHS.build,
-        publicPath: '/js',
         filename: 'rest-react-bundle.js'
+    },
+    module: {
+        loaders: [
+            {
+                loader: 'babel-loader',
+                exclude: /node_modules/,
+                query: {
+                    presets: ['react', 'es2015']
+                }
+            }
+        ]
     }
 };

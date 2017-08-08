@@ -65,6 +65,7 @@
                 <version>2.2</version>
                 <configuration>
                     <webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+                    <packagingExcludes>src</packagingExcludes>
                 </configuration>
                 <executions>
                     <execution>
