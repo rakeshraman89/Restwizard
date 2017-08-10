@@ -1,6 +1,6 @@
-package com.restwizard.dao;
+package com.restwizard.core;
 
-import com.restwizard.representations.Employee;
+import com.restwizard.api.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,4 +1,4 @@
-package com.restwizard.representations;
+package com.restwizard.api;
 
 public class Employee {
 

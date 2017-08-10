@@ -1,7 +1,7 @@
-package com.restwizard.controller;
+package com.restwizard.resources;
 
-import com.restwizard.dao.EmployeeDAO;
-import com.restwizard.representations.Employee;
+import com.restwizard.core.EmployeeDAO;
+import com.restwizard.api.Employee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -24,7 +24,7 @@ public class EmployeeRestController {
 
     @GET
     public Response getEmployees() {
-        LOG.info("getting employees controller");
+        LOG.info("getting employees resources");
         return Response.ok (EmployeeDAO.getEmployees()).build();
     }
 
