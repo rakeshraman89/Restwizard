@@ -17,14 +17,17 @@ class Toggle extends React.Component {
 
     render() {
         return (
-            <button onClick = {this.handleClick}>
-                {this.state.isToggleOn? 'ON' : 'OFF'}
-            </button>
+            <div>
+                <button onClick={this.handleClick}>
+                    {this.state.isToggleOn ? 'ON' : 'OFF'}
+                </button>
+                <p>{this.state.isToggleOn? this.props.message : 'Button is OFF'}</p>
+            </div>
         );
     }
 }
 
 ReactDOM.render(
-    <Toggle />,
+    <Toggle message={"Button is ON"}/>,
     document.getElementById('restwizard-div')
 );
