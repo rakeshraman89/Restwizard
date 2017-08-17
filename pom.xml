@@ -14,9 +14,9 @@
 
     <name>RestWizardApp</name>
 
-    <!--<properties>-->
-        <!--<drop.version>1.0.0</drop.version>-->
-    <!--</properties>-->
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
 
     <!--<dependencies>-->
         <!--<dependency>-->
