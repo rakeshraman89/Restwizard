@@ -8,21 +8,24 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>./services</module>
-        <module>./rest-client</module>
+        <!--<module>./services</module>-->
+        <!--<module>./rest-client</module>-->
     </modules>
 
     <name>RestWizardApp</name>
 
     <properties>
         <java.version>1.8</java.version>
+        <jetty.version>9.0.5.v20130815</jetty.version>
+        <glassfish.javax.version>2.2.3</glassfish.javax.version>
+        <dropwizard.version>1.0.0</dropwizard.version>
     </properties>
 
     <!--<dependencies>-->
         <!--<dependency>-->
             <!--<groupId>io.dropwizard</groupId>-->
             <!--<artifactId>dropwizard-core</artifactId>-->
-            <!--<version>1.0.0</version>-->
+            <!--<version>${dropwizard.version}</version>-->
         <!--</dependency>-->
     <!--</dependencies>-->
 

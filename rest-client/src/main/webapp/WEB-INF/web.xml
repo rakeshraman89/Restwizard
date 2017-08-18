@@ -9,11 +9,11 @@
         <servlet-name>proxy</servlet-name>
         <servlet-class>org.eclipse.jetty.proxy.ProxyServlet$Transparent</servlet-class>
         <init-param>
-            <param-name>ProxyTo</param-name>
+            <param-name>proxyTo</param-name>
             <param-value>http://localhost:9000/</param-value>
         </init-param>
         <init-param>
-            <param-name>Prefix</param-name>
+            <param-name>prefix</param-name>
             <param-value>/api</param-value>
         </init-param>
         <load-on-startup>1</load-on-startup>
