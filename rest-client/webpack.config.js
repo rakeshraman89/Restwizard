@@ -9,7 +9,7 @@ const PATHS = {
 
 module.exports = {
     entry: {
-        'myPages': glob.sync('./src/main/webapp/js/**/*.js')
+        'myPages': glob.sync('./src/main/resources/webapp/js/**/*.js')
     },
 
     output: {

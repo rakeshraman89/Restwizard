@@ -37,7 +37,7 @@
     </dependencies>
 
     <build>
-        <finalName>RestWeb</finalName>
+        <!--<finalName>RestWeb</finalName>-->
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
