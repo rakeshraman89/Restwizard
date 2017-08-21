@@ -4,7 +4,7 @@ var webpack = require('webpack');
 var glob = require('glob');
 
 const PATHS = {
-    build: path.join(__dirname, 'target', 'RestWeb', 'js')
+    build: path.join(__dirname, 'target', 'classes', 'META-INF','resources', 'js')
 };
 
 module.exports = {
