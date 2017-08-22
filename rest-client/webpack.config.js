@@ -4,12 +4,12 @@ var webpack = require('webpack');
 var glob = require('glob');
 
 const PATHS = {
-    build: path.join(__dirname, 'target', 'classes', 'META-INF','resources', 'js')
+    build: path.join(__dirname, 'target', 'classes', 'js')
 };
 
 module.exports = {
     entry: {
-        'myPages': glob.sync('./src/main/resources/webapp/js/**/*.js')
+        'myPages': glob.sync('./src/main/resources/js/**/*.js')
     },
 
     output: {

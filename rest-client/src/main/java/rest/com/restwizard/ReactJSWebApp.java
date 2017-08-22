@@ -5,7 +5,7 @@ import org.eclipse.jetty.webapp.WebAppContext;
 
 public class ReactJSWebApp {
     public static void main (String... args) throws Exception {
-        String webappDirLocation = "src/main/resources/webapp/";
+        String webappDirLocation = "src/main/resources/";
 
         String webPort = System.getenv("PORT");
         if(webPort == null || webPort.isEmpty()) {
